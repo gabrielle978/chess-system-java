@@ -6,3 +6,8 @@
 - construtores
 - ToString (Overrinding)
 - associações
+- modificadores de acesso
+- downcasting
+- herança
+- estrutura de matriz
+- membros estáticos
