@@ -11,3 +11,5 @@
 - herança
 - estrutura de matriz
 - membros estáticos
+- programação defensiva
+- exceções
