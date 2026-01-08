@@ -1,6 +1,8 @@
 package chess.com.udemy.chess;
 
-public class ChessException extends RuntimeException{
+import chess.com.udemy.boardgame.BoardException;
+
+public class ChessException extends BoardException {
     public ChessException (String msg){
         super(msg);
     }
