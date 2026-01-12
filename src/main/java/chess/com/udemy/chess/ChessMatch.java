@@ -25,6 +25,13 @@ public class ChessMatch {
         return mat;
     }
 
+    //Operação p/ imprimir as posições possíveis a partir de uma posição de Origem.
+    public boolean [][] possibleMoves(ChessPosition sourcePosition){
+        Position position = sourcePosition.toPosition();
+        validateSourcePosition(position);
+        return board.piece(position).possibleMoves();
+    }
+
     public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition){
         Position source = sourcePosition.toPosition();
         Position target = targetPosition.toPosition();
@@ -67,10 +74,16 @@ public class ChessMatch {
         placeNewPiece(1, 'e', new Rook(board, Color.WHITE));
         placeNewPiece(1, 'd', new King(board, Color.WHITE));
         placeNewPiece(1, 'c', new Rook(board, Color.WHITE));
+        placeNewPiece(2, 'e', new Rook(board, Color.WHITE));
+        placeNewPiece(2, 'd', new Rook(board, Color.WHITE));
+        placeNewPiece(2, 'c', new Rook(board, Color.WHITE));
 
         placeNewPiece(8, 'e', new Rook(board, Color.BLACK));
         placeNewPiece(8, 'd', new King(board, Color.BLACK));
         placeNewPiece(8, 'c', new Rook(board, Color.BLACK));
+        placeNewPiece(7, 'e', new Rook(board, Color.BLACK));
+        placeNewPiece(7, 'd', new Rook(board, Color.BLACK));
+        placeNewPiece(7, 'c', new Rook(board, Color.BLACK));
 
     }
 
