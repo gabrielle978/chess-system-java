@@ -1,9 +1,6 @@
 package chess.com.udemy.application;
 
-import chess.com.udemy.chess.ChessException;
-import chess.com.udemy.chess.ChessPiece;
-import chess.com.udemy.chess.ChessPosition;
-import chess.com.udemy.chess.Color;
+import chess.com.udemy.chess.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -46,6 +43,13 @@ public class UI {
         catch (RuntimeException e){
             throw new InputMismatchException("Error reading ChessPosition: value are not valid");
         }
+    }
+
+    public static void printMatch(ChessMatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
     }
 
     public static void printBoard(ChessPiece[][] pieces) {
