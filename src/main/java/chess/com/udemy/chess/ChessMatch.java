@@ -3,10 +3,7 @@ package chess.com.udemy.chess;
 import chess.com.udemy.boardgame.Board;
 import chess.com.udemy.boardgame.Piece;
 import chess.com.udemy.boardgame.Position;
-import chess.com.udemy.chess.pieces.Bishop;
-import chess.com.udemy.chess.pieces.King;
-import chess.com.udemy.chess.pieces.Pawn;
-import chess.com.udemy.chess.pieces.Rook;
+import chess.com.udemy.chess.pieces.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -196,6 +193,8 @@ public class ChessMatch {
 
     private void initialSetup(){
         placeNewPiece(1, 'a', new Rook(board, Color.WHITE));
+        placeNewPiece(1, 'b', new Knight(board, Color.WHITE));
+        placeNewPiece(1, 'g', new Knight(board, Color.WHITE));
         placeNewPiece(1, 'c', new Bishop(board, Color.WHITE));
         placeNewPiece(1, 'f', new Bishop(board, Color.WHITE));
         placeNewPiece(1, 'e', new King(board, Color.WHITE));
@@ -211,6 +210,8 @@ public class ChessMatch {
 
 
         placeNewPiece(8, 'a', new Rook(board, Color.BLACK));
+        placeNewPiece(8, 'b', new Knight(board, Color.BLACK));
+        placeNewPiece(8, 'g', new Knight(board, Color.BLACK));
         placeNewPiece(8, 'c', new Bishop(board, Color.BLACK));
         placeNewPiece(8, 'f', new Bishop(board, Color.BLACK));
         placeNewPiece(8, 'e', new King(board, Color.BLACK));
